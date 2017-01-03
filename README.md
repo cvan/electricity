@@ -61,6 +61,7 @@ Electricity comes with a variety of features to help make your web pages fast wi
 - **React JSX:** Electricty transforms [React JSX](http://facebook.github.io/react/docs/jsx-in-depth.html) for you automatically using [babel-core](https://www.npmjs.com/package/babel-core) without the need for client-side translation or build steps.
 - **CDN Hostname:** If you're using a CDN (Content Delivery Network) that supports a custom origin (like Amazon CloudFront) you can specify the hostname you'd like Electricity to use when generating URLs.
 - **Watch:** Electricity watches for changes to your static files and automatically serves the latest content without the need to restart your web server (useful during development). Electricity also understands Sass and Snockets dependency graphs to ensure the parent file contents are updated if a child file has been modified.
+-- **Live Reload:** Electricity offers easy integration with [tiny-lr](https://github.com/mklabs/tiny-lr).
 
 ##Advanced Usage
 
@@ -81,6 +82,9 @@ var options = {
     },
     uglifycss: {
         enabled: true
+    },
+    livereload: {
+        enabled: false
     }
 };
 ```
@@ -107,7 +111,12 @@ var options = {
     },
     uglifycss: { // Object passed straight to uglifycss options
         enabled: true // Minify CSS
+    },
+    livereload: {
+        enabled: false,
+        listener: require('tiny-lr') // Instance of tiny-lr server
     }
+
 };
 ```
 
