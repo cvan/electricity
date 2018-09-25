@@ -1,6 +1,7 @@
 {
   "description": "An alternative to the built-in Express middleware for serving static files. Electricity follows a number of best practices for making web pages fast.",
   "dependencies": {
+    "babel-minify": "^0.5.0",
     "chokidar": "2.0.x",
     "mime": "2.3.x",
     "negotiator": "0.6.x",

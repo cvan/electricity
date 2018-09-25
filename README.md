@@ -75,6 +75,9 @@ var options = {
     hostname: '',
     sass: {},
     snockets: {},
+    babelminifyjs: {
+        enabled: true
+    },
     uglifyjs: {
         enabled: true,
         compress: {
@@ -104,8 +107,11 @@ var options = {
     snockets: { // Object passed straight to snockets options
         ignore: ['raw', /donotcompile/] // Files to skip compilation on, can be a single argument to String.prototype.match or an array
     },
+    babelminifyjs: { // Object passed straight to babel-minify options
+        enabled: true // Minify JavaScript
+    },
     uglifyjs: { // Object passed straight to uglify-js options
-        enabled: true // Minify Javascript
+        enabled: true // Minify JavaScript
     },
     uglifycss: { // Object passed straight to uglifycss options
         enabled: true // Minify CSS
